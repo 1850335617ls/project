@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/logANDreg.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 头部 -->
+			<div class="header">注册<a href="###" class="back"></a><a href="login.html" class="reg">登陆</a></div>
+			
+			<div class="log_main">
+				<form method="post" action="">
+					<input type="text" placeholder="手机号" class="txt"/>
+					<input type="password" placeholder="密码" class="pass"/>
+					<input type="password" placeholder="重复密码" class="repeatPass" />
+					<div><a class="log">同意服务协议并注册</a></div>
+				</form>
+			</div>	
+				
+				
+			<!-- 尾部  -->
+			<div class="footer footerPosition">
+				<a href="../index.html">首页</a>
+				<a href="classify.html">分类</a>
+				<a href="boughtCar.html">购物车</a>
+				<a href="myxiu.html" class="footer_bg">我的秀</a>
+				<a href="more.html">更多</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".log").click(function(){
+			var txt = $(".txt").val();
+			var pass = $(".pass").val();
+			var repeatPass = $(".repeatPass").val();
+			var reg = /^1[0-9]{10}$/; //  11 位的手机号
+			var reg1 = /^[\@A-Za-z0-9\!\#\$\%\^\&\*\.\~]{6,14}$/  // 6-14 位的密码;
+			
+			if(reg.test(txt) && reg1.test(pass) && pass == repeatPass){
+				$.ajax({
+					"type":"get",
+					"url":"http://datainfo.duapp.com/shopdata/userinfo.php",
+					"async":true,
+					"data":{
+						"status":"register",
+						"userID":txt,
+						"password":pass
+					},
+					"success":function(rsp){
+						if(rsp == 0){
+							alert("用户名已存在");
+						}else if(rsp == 2){
+							alert("注册不成功");
+						}else if(rsp == 1){
+							alert("注册成功");
+							setTimeout(function(){
+								window.location.href = "login.html";
+							},2000);
+						}
+					}
+				});
+			}
+		});
+	</script>
+</html>

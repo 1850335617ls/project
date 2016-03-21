@@ -1,0 +1,180 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+ul li{
+	list-style:none;
+}
+
+body{
+	background:#f7f7f7;
+}
+input{
+	border:none;
+}
+/* 头部 */
+.header{
+	background:#e4366b;
+	line-height:0.84rem;
+	text-align:center;
+	font-size:0.4rem;
+	color:#fff;
+	font-weight:900;
+}
+
+/* 个人信息  */
+.information{
+	border-top:0.02rem solid #282828;
+}
+.info{
+	padding-top:0.62rem;
+}
+.dllist2{
+	overflow:hidden;
+	padding-left:0.32rem;
+}
+.dllist2 dt{
+	float:left;
+	width:1.63rem;
+	height:1.59rem;
+	border:0.02px solid rgba(0,0,0,0.3);
+	border-radius:0.2rem;
+	overflow:hidden;
+}
+.dllist2 dt img{
+	width:1.65rem;
+	height:1.60rem;
+	float:left;
+}
+
+.dllist2 dd{
+	float:left;
+	width:4.1rem;
+	padding-left:0.3rem;
+}
+.dllist2 dd p{
+	font-size:0.34rem;
+	line-height:0.9rem;
+}
+.dllist2 dd div{
+	margin-top:0.14rem;
+}
+.dllist2 dd div a{
+	display:block;
+	float:left;
+	width:1.08rem;
+	height:0.56rem;
+	background:linear-gradient(to bottom,#f96690,#f85d87,#f25582,#ef4979,#e83a6f,#e12a62,#dd1d59,#d81653);
+	font-size:0.26rem;
+	text-align:center;
+	line-height:0.56rem;
+	color:#fff;
+	margin-right:0.44rem;
+	border-radius:0.1rem;
+	box-shadow:0px -1px 1px #ccc,
+				0px 1px 1px #ccc inset;
+}
+
+/* 订单 优惠券 浏览记录 我的收藏 */
+.ullist3{
+	clear:both;
+	width:5.54rem;
+	margin-top:0.8rem;
+	margin-left:0.4rem;
+	border:0.02rem solid #dedede;
+	border-left:0.04rem solid #dedede;
+	background:#fff;
+	border-radius:0.1rem;
+}
+.ullist3 li{
+	height:0.88rem;
+	border-bottom:0.02rem solid #dedede;
+	line-height:0.88rem;
+	padding-left:0.3rem;
+	font-size:0.33rem;
+}
+.ullist3 li a{
+	display:block;
+	color:#000;
+	position:relative;
+}
+.circle{
+	display:block;
+	width:0px;
+	height:0px;
+	position:absolute;
+	border-width:0.2rem;
+	border-style:solid;
+	border-color: #fff #fff #fff #aaa;
+	top:0.25rem;
+	right:0.2rem;
+}
+
+.ullist3 li:last-child{
+	border-bottom:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

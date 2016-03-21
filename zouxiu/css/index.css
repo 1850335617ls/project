@@ -1,0 +1,124 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+input{
+	border:none;
+}
+
+/* banner */
+.banner{
+	width:6.4rem;
+	height:2.52rem;
+	position:relative;
+}
+.banner img{
+	width:6.4rem;
+	height:2.52rem;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.ullist{
+	z-index:50;
+	position:absolute;
+	width:0.9rem;
+	bottom:0.2rem;
+	left:50%;
+	margin-left:-0.45rem;
+}
+.ullist li{
+	list-style:none;
+	float:left;
+	width:0.2rem;
+	height:0.2rem;
+	background:#fff;
+	margin-right:0.1rem;
+}
+
+/* main */
+
+.main {
+	clear: both;
+	width: 6.4rem;
+	background:#fefcfd;
+	margin-bottom:1.2rem;
+}
+
+.list {
+	padding-top: 0.2rem;
+	border-bottom: 0.04rem solid #a8a8a8;
+	padding-bottom:0.25rem;
+}
+
+.dllist {
+	overflow: hidden;
+	padding-left:0.15rem;
+}
+
+.dllist dt {
+	float: left;
+	width: 1.76rem;
+	height:1.74rem;
+	border:0.02rem solid rgba(0,0,0,0.6);
+}
+.dllist dt img{
+	float:left;
+	width: 1.76rem;
+	height:1.74rem;
+}
+
+.dllist dd{
+	float:left;
+	width:3.90rem;
+	padding-left:0.14rem;
+	padding-top:0.02rem;
+	padding-right:0px;
+}
+.detail{
+	font-size:0.28rem;
+	line-height:0.38rem;
+}
+.tot{
+	overflow:hidden;
+}
+.money{
+	margin-top:0.14rem;
+	width:2.6rem;
+	float:left;
+	font-size:0.4rem;
+	color:#f56694;
+	font-weight:900;
+}
+.money del{
+	font-size:0.3rem;
+	color:#c2c0c1;
+	margin-left:0.16rem;
+}
+.money span{
+	font-size:0.3rem;
+	color:#000;
+	margin-left:0.04rem;
+}
+
+.car{
+	float:left;
+	width:1.19rem;
+	height:0.51rem;
+	margin-top:0.28rem;
+}
+.car a{
+	display:block;
+	width:1.19rem;
+	height:0.51rem;
+	background:url(../img/car.jpg);
+	background-size:cover;
+}
+
+
+
+

@@ -1,0 +1,89 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+/* 头部 */
+
+.header {
+	width:6.4rem;
+	height: 0.84rem;
+	background: url(../img/logo.jpg);
+	background-size: 100% 100%;
+	position:relative;
+}
+.header_position{
+	position:fixed;
+	left:0px;
+	top:0px;
+	z-index:100;
+}
+/* 头部 */
+.back{
+	display:block;
+	width:0.49rem;
+	height:0.31rem;
+	background:url(../img/back.jpg);
+	background-size:cover;
+	position:absolute;
+	left:0.18rem;
+	top:0.28rem;
+}
+
+/* 搜索 */
+
+.search {
+	height: 0.92rem;
+	background: #52525a;
+	position:relative;
+}
+
+.ser{
+	width:5.11rem;
+	height:0.57rem;
+	padding-left:0.78rem;
+	border-radius:0.25rem;
+	float:left;
+	margin-left:0.255rem;
+	margin-top:0.175rem;
+}
+.btn_search{
+	position:absolute;
+	display:block;
+	width:0.37rem;
+	height:0.38rem;
+	background:url(../img/sear.jpg);
+	background-size:cover;
+	left:0.55rem;
+	top:0.3rem;
+}
+
+/* 尾部 */
+
+.footer {
+	width: 6.4rem;
+	height: 1.2rem;
+	background: #554a50;
+	z-index: 100;
+}
+
+.footerPosition{
+	position:fixed;
+	bottom: 0px;
+	left: 0px;
+}
+.footer a {
+	display: block;
+	float: left;
+	width: 1.28rem;
+	height: 1.2rem;
+	text-align: center;
+	line-height: 1.2rem;
+	color: #fff;
+	font-size: 0.36rem;
+	font-weight: 900;
+}
+
+.footer_bg {
+	background: #e4366b;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分类</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/classify.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 头部 -->
+			<div class="header"><a href="" class="back"></a></div>
+		
+			<!-- 搜索框 -->
+			<div class="search">
+				<input type="text" placeholder="请输入搜索内容" class="ser" />
+				<a href="###" class="btn_search"></a>
+			</div>
+		
+			<!-- 分类  -->
+			<div class="clothList">
+				<div class="totalCloth">全部<i></i></div>
+				<div class="clothUllist">
+					<!--
+					<ul class="ullist1">
+						<li><a href="###">衬衫<span></span></a></li>
+					</ul>
+					-->
+					<script type="text/javascript">
+						$.ajax({
+							type:"get",
+							url:"http://datainfo.duapp.com/shopdata/getclass.php",
+							async:true,
+							success:function(rsp){
+								var rsp = eval(rsp);
+								var str = "";
+								for(var i = 0; i < rsp.length; i ++){
+									str += '<ul class="ullist1"><li><a href="###">' + rsp[i].className + '<span></span></a></li></ul>';
+								}
+								$(".clothUllist").html(str);
+							}
+						});
+					</script>
+				</div>
+			</div>
+			
+			<!-- 尾部  -->
+			<div class="footer footerPosition">
+				<a href="../index.html">首页</a>
+				<a href="classify.html" class="footer_bg">分类</a>
+				<a href="boughtCar.html">购物车</a>
+				<a href="myxiu.html">我的秀</a>
+				<a href="more.html">更多</a>
+			</div>
+		</div>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

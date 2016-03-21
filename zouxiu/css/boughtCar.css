@@ -1,0 +1,236 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+
+body{
+	background:#f7f7f7;
+}
+input{
+	border:none;
+}
+/* 头部 */
+.header{
+	background:#e4366b;
+	line-height:0.84rem;
+	text-align:center;
+	font-size:0.4rem;
+	color:#fff;
+	font-weight:900;
+}
+.balance{
+	display:block;
+	width:1.2rem;
+	height:0.58rem;
+	position:absolute;
+	right:0.12rem;
+	top:0.13rem;
+	text-align:center;
+	line-height:0.58rem;
+	font-size:0.3rem;
+	color:#fff;
+	background:linear-gradient(to right,#f25280,#f55a84,#f65b85,#f45782,#ec4175);
+	border-radius:0.1rem;
+	box-shadow:0px 1px 1px #fff,
+	           0px -1px 1px #666;
+}
+
+
+
+/* 购物车中什么也没有 */
+.carMain{
+	border-top:0.02rem solid #282828;
+	margin-bottom:1.2rem;
+}
+.carMain p{
+	text-align:center;
+	font-size:0.34rem;
+	margin-top:0.6rem;
+}
+
+.carMain div{
+	overflow:hidden;
+	margin-top:0.3rem;
+}
+
+.carMain div img{
+	float:left;
+	width:2.6rem;
+	height:2.61rem;
+	margin-left:1.9rem;
+}
+
+.carMain a{
+	margin-top:0.7rem;
+	margin-left:1.09rem;
+	display:block;
+	width:4.22rem;
+	height:0.94rem;
+	border-radius:0.1rem;
+	color:#fff;
+	font-size:0.46rem;
+	text-align:center;
+	line-height:0.94rem;
+	background:linear-gradient(to bottom, #f8618a,#f55a86,#f65b87,#f55885,#f04d7c,#eb3f71,#e53269,#df235e,#d8104f)
+}
+
+
+
+/* 购物车的详情 */
+.carMaindetail{
+	border-top:0.02rem solid #282828;
+	margin-bottom:1.2rem;
+}
+.display{
+	display:none;
+}
+
+.carMoney{
+	height:0.9rem;
+	background:#333333;
+	color:#fff;
+	font-size:0.28rem;
+	line-height:0.9rem;
+	text-align:center;
+}
+.goodsCount{
+	margin-right:0.4rem;
+}
+.totalMoney{
+	color:#e7366c;
+	font-weight:900;
+}
+
+
+.dllist1{
+	padding-top:0.27rem;
+	padding-bottom:0.27rem;
+	border-bottom:0.02rem solid rgba(0,0,0,0.6);
+	overflow:hidden;
+}
+
+.dllist1 dt{
+	float:left;
+	width:1.72rem;
+	height:1.74rem;
+	margin-left:0.29rem;
+	border:0.02rem solid rgba(0,0,0,0.3);
+}
+.dllist1 dt img{
+	width:1.72rem;
+	float:left;
+}
+.dllist1 dd{
+	float:left;
+	width: 4.07rem;
+	font-size:0.26rem;
+	padding-left:0.28rem;
+	font-weight:900;
+}
+.dllist1 dd p{
+	line-height:0.4rem;
+}
+.clothdetail{
+	position:relative;
+}
+.clothdetail del{
+	display:block;
+	position:absolute;
+	width:0.28rem;
+	height:0.36rem;
+	background:url(../img/del.jpg);
+	background-size:100% 100%;
+	top:0px;
+	right:0.24rem;
+}
+
+.singleprice span{
+	color:#e5376c;
+	margin-right:1.6rem;
+}
+
+.clothCount{
+	height:0.42rem;
+	margin-top:0.1rem;
+}
+.clothCount span,.addBtn,.subBtn,.text{
+	float:left;
+}
+.subBtn,.addBtn{
+	display:inline-block;
+	width:0.58rem;
+	height:0.42rem;
+	font-size:0.4rem;
+	text-align:center;
+	line-height:0.42rem;
+	background:#848484;
+	color:#fff;
+	border-radius:0.1rem;
+}
+.text{
+	width:0.76rem;
+	height:0.42rem;
+	text-align:center;
+	line-height:0.42rem;
+	border-top:0.02rem solid #afafaf;
+	border-left:0.02rem solid #afafaf;
+	border-right:0.02rem solid #ececec;
+	border-bottom:0.02rem solid #ececec;
+	border-radius:0.1rem;
+	margin:0px 0.15rem;
+	box-shadow:1px 1px 1px #AFAFAF inset;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品介绍</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script type="text/javascript" src="../js/tiaozhuan.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/detail.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 头部 -->
+			<div class="header"><span>商品介绍</span><a href="../index.html" class="back"></a><a href="###" class="share">分享</a></div>
+			
+			<!-- 详细介绍 -->
+			<div class="detailMain">
+				<div class="endTime">距离结束时间：04天01时15分47.2秒</div>
+				<!-- 加载 -->
+				<div class="loadPic"></div>
+				<!--
+				<div class="pic">
+					<span><img src="../img/pic.jpg" alt="" /></span>
+					<p class="biaoqian">￥259 灰色印花短袖T恤</p>
+					<p class="boughtCount">市场价：<del>￥439</del>4.8折  125人购买</p>
+				</div>
+				-->
+				<script type="text/javascript">
+				var goodsId = localStorage.getItem("goodsId");
+				//console.log(goodsId);
+					$.ajax({
+						"type":"get",
+						"url":"http://datainfo.duapp.com/shopdata/getGoods.php",
+						"async":true,
+					    "dataType":"jsonp",
+						"success":function(rsp){
+							//console.log( rsp);
+							var index;
+							var str = "";
+							for(var i = 0; i < rsp.length; i ++){
+								if(goodsId ==  rsp[i].goodsID){
+									index = i;
+								}
+							}
+							localStorage.setItem("_index",index);
+							str = '<div class="pic"><span><img src="' + rsp[index].goodsListImg + '" alt="" /></span><p class="biaoqian">￥' + rsp[index].price +' '+ rsp[index].className +'</p><p class="boughtCount">市场价：<del>￥439</del>' + rsp[index].discount +'折  ' + rsp[index].buynumber +'人购买</p></div>';
+							$(".loadPic").html(str);
+						}
+					});
+				</script>
+			</div>
+			
+			<!-- 尾部 -->
+			<div class="footerList">
+				<ul class="ullist7">
+					<li class="footer_bg"><a href="goodsProduct.html">介绍</a></li>
+					<li><a href="goodsDetail.html">详情</a></li>
+					<li><a href="shipai.html">实拍</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

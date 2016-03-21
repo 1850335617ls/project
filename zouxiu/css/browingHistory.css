@@ -1,0 +1,114 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+ul li{
+	list-style:none;
+}
+
+body{
+	background:#f7f7f7;
+}
+input{
+	border:none;
+}
+
+/* 头部 */
+.header{
+	background:#e4366b;
+	line-height:0.84rem;
+	text-align:center;
+	font-size:0.4rem;
+	color:#fff;
+	font-weight:900;
+}
+
+
+/* 浏览信息  */
+.browList{
+	border-top:0.02rem solid #282828;
+	background:#fff;
+	margin-bottom:1.2rem;
+}
+
+
+.dllist3{
+	padding-top:0.27rem;
+	padding-bottom:0.27rem;
+	border-bottom:0.02rem solid rgba(0,0,0,0.6);
+	overflow:hidden;
+}
+
+.dllist3 dt{
+	float:left;
+	width:1.72rem;
+	height:1.74rem;
+	margin-left:0.29rem;
+	border:0.02rem solid rgba(0,0,0,0.3);
+}
+.dllist3 dt img{
+	width:1.72rem;
+	height:1.74rem;
+	float:left;
+}
+.dllist3 dd{
+	float:left;
+	width: 4.07rem;
+	font-size:0.26rem;
+	padding-left:0.28rem;
+	font-weight:900;
+}
+.dllist3 dd p{
+	line-height:0.4rem;
+}
+.clothdetail{
+	position:relative;
+}
+.clothdetail del{
+	display:block;
+	position:absolute;
+	width:0.28rem;
+	height:0.36rem;
+	background:url(../img/del.jpg);
+	background-size:100% 100%;
+	top:0px;
+	right:0.24rem;
+}
+
+.singleprice span{
+	color:#e5376c;
+	margin-right:1.6rem;
+}
+
+.clothCount{
+	position:relative;
+}
+.car{
+	position:absolute;
+	display:block;
+	width:1.19rem;
+	height:0.51rem;
+	right:0.48rem;
+	top:-0.15rem;
+	background:url(../img/car.jpg);
+	background-size:cover;
+}
+.clothCount del{
+	color:#bcbcbc;
+	margin-left:0.27rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+

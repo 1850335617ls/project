@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>走秀网首页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="js/rem.js"></script>
+		<script type="text/javascript" src="js/tiaozhuan.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 头部 -->
+			<div class="header"></div>
+		
+			<!-- 搜索框 -->
+			<div class="search">
+				<input type="text" placeholder="请输入搜索内容" class="ser" />
+				<a href="###" class="btn_search"></a>
+			</div>
+			
+				
+			<!-- banner -->
+			<div class="banner">
+				<script type="text/javascript">
+					$.ajax({
+						"type":"get",
+						"url":"http://datainfo.duapp.com/shopdata/getBanner.php",
+						"async":true,
+						"dataType":"jsonp",
+						"success":function(rsp){
+							var rsp = eval(rsp);
+							var str = "";
+							var value;
+							//var banner = document.getElementById("banner");
+							str = rsp[0]["goodsBenUrl"];
+							str = str.substring(1,str.length-1); // 去掉字符串前面的中括号
+							str = str.split(",");  // 将字符串转化成数组
+							//console.log(rsp[0]);
+							//console.log(str[0]);
+							
+							for(var i = 0; i < 3; i ++){
+							    value += '<img src=' + str[i] + ' alt=""/>';
+							}
+							//console.log(typeof str[0]);
+							$(".banner").html(value);
+						}
+					});
+				</script>
+				
+			</div>
+				
+			<!-- 中间列表 -->
+			<div class="main">
+				<!--
+				<div class="list">
+					<dl class="dllist">
+						<dt>
+							<img src="img/sear.jpg" alt=""/>
+						</dt>
+						<dd>
+							<p class="detail">0元大抽奖！走秀携古尔沙为你开启，价值28880元的土耳其</p>
+							<div class="tot">
+								<div class="money">
+									￥0<del>￥28880</del><br />
+									<span>0折</span>
+								</div>
+								<div class="car"><a href="###"></a></div>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				-->
+			
+			
+			</div>
+			
+			<!-- 尾部  -->
+			<div class="footer footerPosition">
+				<a href="index.html" class="footer_bg">首页</a>
+				<a href="html/classify.html">分类</a>
+				<a href="html/boughtCar.html">购物车</a>
+				<a href="html/myxiu.html">我的秀</a>
+				<a href="html/more.html">更多</a>
+			</div>
+			
+		</div>
+	</body>
+</html>

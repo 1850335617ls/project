@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/detail.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 头部 -->
+			<div class="header"><span>商品详情</span><a href="goodsProduct.html" class="back"></a><a href="###" class="share">分享</a></div>
+		
+			<div class="detailMain">
+				<div class="detailBanner"><img src="" alt=""/></div>
+				<div class="production"></div>
+			</div>
+			<script type="text/javascript">
+				$.ajax({
+					"type":"get",
+						"url":"http://datainfo.duapp.com/shopdata/getGoods.php",
+						"async":true,
+					    "dataType":"jsonp",
+						"success":function(rsp){
+							//console.log(rsp);
+							var index = localStorage.getItem("_index");
+							$(".detailBanner > img").attr("src",rsp[index].goodsListImg);
+							
+							var str = '<p>商品名称：' + rsp[index].goodsName + '</p>';
+							$(".production").html(str);
+							
+						}
+				});
+			</script>
+		
+			<!-- 尾部 -->
+			<div class="footerList">
+				<ul class="ullist7">
+					<li><a href="goodsProduct.html">介绍</a></li>
+					<li class="footer_bg"><a href="goodsDetail.html">详情</a></li>
+					<li><a href="shipai.html">实拍</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</body>
+</html>

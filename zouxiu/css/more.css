@@ -1,0 +1,119 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+ul li{
+	list-style:none;
+}
+
+body{
+	background:#f7f7f7;
+}
+input{
+	border:none;
+}
+html,body{
+	height:100%;
+}
+/* 头部 */
+.header{
+	background:#e4366b;
+	line-height:0.84rem;
+	text-align:center;
+	font-size:0.4rem;
+	color:#fff;
+	font-weight:900;
+}
+
+/* 其他需求  */
+.moreRequest{
+	border-top:0.02rem solid #282828;
+	padding-top:0.38rem;
+	padding-left:0.425rem;
+	padding-right:0.425rem;
+	margin-bottom:1.2rem;
+	min-height: 79.9%;
+}
+
+.ullist5{
+	border:0.02rem solid rgba(0,0,0,0.3);
+	background:#fff;
+	border-radius:0.15rem;
+}
+
+.ullist5 li{
+	width:5.27rem;
+	height:0.88rem;
+	line-height:0.88rem;
+	font-size:0.36rem;
+	border-bottom:0.02rem solid rgba(0,0,0,0.3);
+	padding-left:0.28rem;
+}
+
+.ullist5 li a{
+	display:block;
+	color:#000;
+	position:relative;
+}
+.ullist5 li a i{
+	position:absolute;
+	display:block;
+	width:0px;
+	height:0px;
+	border-width:0.2rem;
+	border-style:solid;
+	border-color: #fff #fff #fff #aaa;
+	top:0.25rem;
+	right:0.2rem;
+}
+
+.ullist5 .noBorder{
+	border-bottom:none;
+}
+
+.ullist6{
+	margin-top:0.24rem;
+}
+
+.dropout{
+	margin-top:0.22rem ;
+	padding-bottom:0.12rem;
+}
+.dropout a{
+	display:block;
+	width:5.58rem;
+	height:0.9rem;
+	color:#fff;
+	font-size:0.36rem;
+	text-align:center;
+	line-height:0.9rem;
+	border-radius:0.1rem;
+	background:linear-gradient(to bottom,#fb608a,#f55d86,#f2507f,#f14f7e,#ec4477,#e5346a,#e42f66,#df235e,#df235d,#dc1e5a,#db1956,#d91351);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

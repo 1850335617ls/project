@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品实拍</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script type="text/javascript" src="../js/touch-0.2.14.min.js"></script>
+		<script type="text/javascript" src="../js/shipai.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/detail.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 头部 -->
+			<div class="header"><span>商品实拍</span><a href="goodsProduct.html" class="back"></a><a href="###" class="share">分享</a></div>
+		
+			<div class="shipaiMain">
+				<ul class="ullist8" id="picBanner">
+					
+				</ul>
+				<script type="text/javascript">
+					$.ajax({
+						"type":"get",
+						"url":"http://datainfo.duapp.com/shopdata/getGoods.php",
+						"async":true,
+						"dataType":"jsonp",
+						"success":function(rsp){
+							//console.log(rsp);
+							var index = localStorage.getItem("_index");
+							var arr = JSON.parse(rsp[index].imgsUrl); // 存放图片
+							var str = "";
+							for(var i = 0; i < arr.length; i ++){
+								str += '<li><img src="' + arr[i] + '" alt=""/></li>'
+							}
+							
+							$(".ullist8").html(str);
+						}
+					});
+				</script>
+				<ul class="ullist9">
+					<li class="bg"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		
+			<!-- 尾部 -->
+			<div class="footerList">
+				<ul class="ullist7">
+					<li><a href="goodsProduct.html">介绍</a></li>
+					<li><a href="goodsDetail.html">详情</a></li>
+					<li class="footer_bg"><a href="shipai.html">实拍</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</body>
+</html>

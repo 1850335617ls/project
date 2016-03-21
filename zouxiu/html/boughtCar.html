@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/boughtCar.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 头部 -->
+			<div class="header">购物车<a href="###" class="back"></a><a href="###" class="balance">去结算</a></div>
+			
+			<!-- 什么也没有 -->
+			<div class="carMain">
+				<p>您的购物车空空~</p>
+				<div><img src="../img/nocloth.jpg" alt=""/></div>
+				<a href="###">去逛逛</a>
+			</div>
+			
+			<!-- 购买信息 -->
+			<div class="carMaindetail display">
+				<div class="carMoney">商品数量:<span class="goodsCount">1</span>应付总额(不含运费):<span class="totalMoney">￥199</span></div>
+				<div class="ullist2">
+					<dl class="dllist1">
+						<dt><img src="../img/back.jpg" alt=""/></dt>
+						<dd>
+							<p class="clothdetail">ESPRIT 气质V领玫红T恤<del></del></p>
+							<p class="clothName">T恤</p>
+							<p class="singleprice">单价：<span>￥199</span>L</p>
+							<p class="clothCount"><span>数量：</span><a class="subBtn">-</a><input type="text" value="1" mim="1" max="20" step="1" class="text"/><a class="addBtn">+</a></p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			
+			
+			
+			<!-- 尾部  -->
+			<div class="footer footerPosition">
+				<a href="../index.html">首页</a>
+				<a href="classify.html">分类</a>
+				<a href="boughtCar.html" class="footer_bg">购物车</a>
+				<a href="myxiu.html">我的秀</a>
+				<a href="more.html">更多</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		if(localStorage.getItem("carGoodsId")){
+			$(".carMain").addClass("display");
+			$(".carMaindetail").removeClass("display");
+		}
+	</script>
+</html>

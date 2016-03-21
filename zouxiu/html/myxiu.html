@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/myxiu.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 头部 -->
+			<div class="header">我的秀<a href="###" class="back"></a></div>
+			
+			<!-- 个人情况 -->
+			<div class="information">
+				<!-- 个人头像昵称 -->
+				<div class="info">
+					<dl class="dllist2">
+						<dt><img src="" alt="" class="personImg"/></dt>
+						<dd>
+							<p>昵称：<span class="know">未知</span></p>
+							<div><a href="login.html">登陆</a><a href="register.html">注册</a></div>
+						</dd>
+					</dl>
+					
+					<!-- 订单 优惠券 浏览记录 我的收藏 -->
+					<ul class="ullist3">
+						<li><a href="myBill.html">我的订单<span class="circle"></span></a></li>
+						<li><a href="myCoupons.html">我的优惠券<span class="circle"></span></a></li>
+						<li><a href="browingHistory.html">浏览记录<span class="circle"></span></a></li>
+						<li><a href="myCollection.html">我的收藏<span class="circle"></span></a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- 尾部  -->
+			<div class="footer footerPosition">
+				<a href="../index.html">首页</a>
+				<a href="classify.html">分类</a>
+				<a href="boughtCar.html">购物车</a>
+				<a href="myxiu.html" class="footer_bg">我的秀</a>
+				<a href="more.html">更多</a>
+			</div>
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		var user_info = localStorage.getItem("user_info");
+		$(".know").html(user_info);
+		$.ajax({
+			"type":"get",
+			"url":"http://datainfo.duapp.com/shopdata/getuser.php",
+			"async":true,
+			"dataType":"jsonp",
+			"data":{
+				"userID":user_info
+			},
+			"success":function(rsp){
+				//console.log(rsp);
+				$(".personImg").attr("src",rsp["0"].userimg_url);
+			}
+		});
+	</script>
+</html>

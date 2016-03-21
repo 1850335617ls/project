@@ -1,0 +1,94 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+a{
+	text-decoration:none;
+}
+ul li{
+	list-style:none;
+}
+
+body{
+	background:#f7f7f7;
+}
+input{
+	border:none;
+}
+
+/* 头部 */
+.header{
+	background:#e4366b;
+	line-height:0.84rem;
+	text-align:center;
+	font-size:0.4rem;
+	color:#fff;
+	font-weight:900;
+}
+
+/* 优惠券  */
+.couponsMain{
+	border-top:0.02rem solid #282828;
+	margin-bottom:1.2rem;
+}
+
+.ullist4{
+	margin-top:0.3rem;
+	padding-left:0.6rem;
+	padding-right:0.6rem;
+}
+.ullist4 ul {
+	border-top:0.02rem solid rgba(0,0,0,0.3);
+	border-radius:0.1rem;
+	overflow:hidden;
+}
+.ullist4 ul li{
+	float:left;
+	font-size:0.3rem;
+	font-weight:900;
+	width:1.28rem;
+	height:0.62rem;
+	color:#464646;
+	text-align:center;
+	line-height:0.62rem;
+	background:linear-gradient(to bottom,#f5f5f5,#f3f3f3,#ebebeb,#e4e4e4,#dedede,#dddddd,#d9d9d9,#d3d3d3,#c9c9c9,#c7c7c7);
+	border-right:0.02rem solid rgba(0,0,0,0.3);
+}
+
+.ullist4 ul .li_bg{
+	color: #fff;
+	background:linear-gradient(to bottom,#f35882,#f1547f,#ee4b7a,#ec4475,#e6396e,#e32e65,#e5346a,#de255f,#e02961,#db1d59,#d81653);
+}
+
+.couponsdetail{
+	margin-top:0.25rem;
+	background:#ff0;
+}
+.couponsdetail div{
+	width:5rem;
+	border-top:0.02rem solid rgba(0,0,0,0.3);
+	border-left:0.02rem solid rgba(0,0,0,0.3);
+	border-radius:0.1rem;
+	background:#fff;
+	padding-left:0.18rem;
+}
+
+.couponsdetail div p{
+	font-size:0.26rem;
+	line-height:0.36rem;
+}
+
+.couponsdetail div p span{
+	color:#a3a3a3;
+}
+
+
+
+
+
+
+
+
+
+
+

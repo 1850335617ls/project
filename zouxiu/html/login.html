@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/logANDreg.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 头部 -->
+			<div class="header">登陆<a href="###" class="back"></a><a href="register.html" class="reg">注册</a></div>
+			
+			<div class="log_main">
+				<form>
+					<input type="text" placeholder="手机号" class="tell txt"/>
+					<input type="password" placeholder="密码" class="password pass"/>
+					<p><input type="checkbox" class="checkbox"/>记住密码<span>忘记密码？</span></p>
+					<div><a class="log"id="login">登陆</a></div>
+				</form>
+			</div>	
+				
+				
+			<!-- 尾部  -->
+			<div class="footer footerPosition">
+				<a href="../index.html">首页</a>
+				<a href="classify.html">分类</a>
+				<a href="boughtCar.html">购物车</a>
+				<a href="myxiu.html" class="footer_bg">我的秀</a>
+				<a href="more.html">更多</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$("#login").click(function(){
+			var tell = $(".tell").val();
+			var pass = $(".password").val();
+			$.ajax({
+				"type":"get",
+				"url":"http://datainfo.duapp.com/shopdata/userinfo.php",
+				"async":true,
+				"data":{
+					"status":"login",
+					"userID":tell,
+					"password":pass
+				},
+				"success":function(rsp){
+					var rsp = JSON.parse(rsp);
+					console.log(rsp);
+					//console.log(encodeURI(rsp.password));
+					if(rsp == 0){
+						alert("用户名不存在");
+					}else if(rsp == 2){
+						alert("用户名与密码不符");
+					}else{
+						alert("登陆成功");
+						localStorage.setItem("user_info",rsp.userID);
+						setTimeout(function(){
+							window.location.href = "myxiu.html";
+						},2000);
+					}
+				}
+			});
+		});
+	</script>
+</html>
