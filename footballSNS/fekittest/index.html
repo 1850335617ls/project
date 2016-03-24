@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			fekit init "项目名" : 创建项目
+			fekit server : 启动环境
+			fekit server -p 8080: 重新指定一个新的端口
+			fekit server --help : 查看fekit所有的命令
+			
+			问题:
+			当模块化之后 ，会出现 module 未定义  --- 修改：将script的路径中的sec改成prd
+			之后会报错 index.js找不着   --- x修改： 在fekit.config的export中添加scripts/index.js
+			
+			[修改路径:线上运用
+			export不需要配置 即删除之前的映射
+			fekit server -n
+			此时刷新页面又可以运行
+			fekit server -c : 将动态加载的所有js合并成一个js
+			]  一般不这么做
+			
+			恢复 export 的映射
+			
+			修改别名: 在fekit.config 中修改 
+		-->
+		<h1>1234567890</h1>
+	</body>
+	
+	<script type="text/javascript" src="http://localhost/fekittest/prd/scripts/index@ver.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
